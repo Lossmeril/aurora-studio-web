@@ -1,0 +1,31 @@
+@use "./animations.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  background-color: black;
+  height: 100vh;
+  margin: 0rem;
+  overflow: hidden; 
+
+  font-family: 'Readex Pro', sans-serif;
+}
+
+main {
+  position: relative;
+  z-index: 5;
+}
+
+.subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+}
+
+h1, h2 {
+  color: white;
+  font-weight: 800;
+}
