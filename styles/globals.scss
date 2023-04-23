@@ -1,31 +1,52 @@
 @use "./animations.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import "./colors.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
 
 body {
-  background-color: black;
-  height: 100vh;
+  background: linear-gradient(45deg, black, #180810);
   margin: 0rem;
-  overflow: hidden; 
+}
 
-  font-family: 'Readex Pro', sans-serif;
+nav {
+  .nextui-navbar-container {
+    background: transparent;
+  }
 }
 
 main {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 5;
 }
 
-.subtitle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  height: 100%;
-}
-
-h1, h2 {
+h1,
+h2 {
   color: white;
   font-weight: 800;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+}
+
+.subtitle {
+  height: 100%;
+
+  h2 {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    max-width: 50%;
+
+    text-align: left;
+  }
+}
+
+.works {
+  position: relative;
+  height: 100vh;
 }

@@ -1,7 +1,9 @@
 import Head from "next/head";
+import { Card, Col, Grid, Text } from "@nextui-org/react";
 
 //COMPONENTS
 import Glow from "@/components/Glow";
+import SiteNavbar from "@/components/Navbar";
 
 export default function Home() {
   return (
@@ -12,13 +14,59 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Glow />
       <div id="blur"></div>
+
+      <SiteNavbar />
       <main className="main">
         <div className="header">
           <div className="subtitle">
-            <h2>Vaše kreativní řešení</h2>
+            <Text
+              h2
+              size={80}
+              css={{
+                textGradient: "45deg, $blue600 -20%, $pink600 50%",
+                mixBlendMode: "exclusion",
+                lineHeight: "1em",
+              }}
+              weight="bold"
+            >
+              Baví nás řešit digitální problémy za použití kreativity a
+              nekonvenčního myšlení!
+            </Text>
           </div>
+        </div>
+
+        <div className="works">
+          <Grid.Container gap={2} justify="center">
+            <Grid xs={12} sm={2}>
+              <Card>
+                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={12}
+                      weight="bold"
+                      transform="uppercase"
+                      color="#ffffffAA"
+                    >
+                      What to watch
+                    </Text>
+                    <Text h4 color="white">
+                      Stream the Acme event
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Image
+                  src="https://nextui.org/images/card-example-4.jpeg"
+                  objectFit="cover"
+                  width="100%"
+                  height={340}
+                  alt="Card image background"
+                />
+              </Card>
+            </Grid>
+          </Grid.Container>
         </div>
       </main>
     </>
