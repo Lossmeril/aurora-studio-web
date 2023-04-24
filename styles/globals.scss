@@ -6,6 +6,14 @@
 body {
   background: linear-gradient(45deg, black, #180810);
   margin: 0rem;
+  position: relative;
+
+  min-height: 100vh;
+
+  > div {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 nav {
@@ -50,4 +58,114 @@ h2 {
   position: relative;
   height: 100vh;
   padding: 0 10%;
+}
+
+.about {
+  background-color: antiquewhite;
+}
+
+.projects-grid {
+  position: absolute;
+  left: 0;
+  transform: translate(50%, 0);
+
+  width: 100%;
+  margin: 50px 0;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 350px;
+  grid-gap: 15px;
+
+  .item {
+    box-shadow: 0 12px 20px 6px rgb(0 0 0 / 0.08);
+    animation: linear 1s;
+
+    position: relative;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    .project-image {
+      height: 100%;
+      width: 100%;
+
+      transition: all ease-in-out 0.5s;
+    }
+
+    .project-content {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      padding: 50px;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: left;
+
+      transition: all ease-in-out 0.5s;
+
+      opacity: 0;
+      z-index: 10;
+    }
+
+    &:hover {
+      .project-image {
+        transition: all ease-in-out 0.5s;
+        transform: scale(1.05);
+        filter: grayscale(1);
+        opacity: 0.25;
+        // mix-blend-mode: multiply;
+      }
+
+      .project-content {
+        opacity: 1;
+      }
+    }
+  }
+
+  .rowspan {
+    grid-row: span 2;
+  }
+
+  .colspan {
+    grid-column: span 2;
+  }
+}
+
+.contact-us-button-container {
+  .contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    border: 1px solid white;
+
+    p {
+      text-transform: uppercase;
+      line-height: 1em;
+      text-align: center;
+    }
+  }
+
+  .contact-us-button {
+    bottom: 50px;
+    right: 50px;
+
+    height: 100px;
+    width: 100px;
+  }
+
+  .youtube-button {
+    bottom: 50px;
+    right: 50px;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 75px;
+
+    background-color: aqua;
+  }
 }
