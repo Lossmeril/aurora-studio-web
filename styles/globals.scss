@@ -1,4 +1,5 @@
 @use "./animations.scss";
+@use "./blobs.scss";
 
 @import "./colors.module.scss";
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
@@ -134,38 +135,46 @@ h2 {
   }
 }
 
-.contact-us-button-container {
-  .contact-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    border-radius: 100px;
-    border: 1px solid white;
+  position: fixed;
+  z-index: 20;
 
-    p {
-      text-transform: uppercase;
-      line-height: 1em;
-      text-align: center;
-    }
+  border-radius: 100px;
+  border: 1px solid white;
+
+  transition: transform ease-in-out 0.25s;
+
+  p {
+    text-transform: uppercase;
+    line-height: 1em;
+    text-align: center;
   }
 
-  .contact-us-button {
-    bottom: 50px;
-    right: 50px;
-
-    height: 100px;
-    width: 100px;
+  &:hover {
+    transform: scale(1.2);
+    transition: transform ease-in-out 0.5s;
   }
+}
 
-  .youtube-button {
-    bottom: 50px;
-    right: 50px;
+.contact-us-button {
+  bottom: 50px;
+  right: 50px;
 
-    height: 50px;
-    width: 50px;
-    border-radius: 75px;
+  height: 100px;
+  width: 100px;
+}
 
-    background-color: aqua;
-  }
+.youtube-button {
+  bottom: 50%;
+  right: 50px;
+
+  height: 50px;
+  width: 50px;
+  border-radius: 75px;
+
+  background-color: #ed4fa2;
 }

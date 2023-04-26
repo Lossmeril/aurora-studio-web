@@ -6,7 +6,8 @@ import Glow from "@/components/Glow";
 import SiteNavbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import ContactUsButton from "@/components/ContactUsButton";
-import Blob from "@/components/Blob";
+
+import BouncingBlob from "@/components/BouncingBlob";
 
 export default function Home() {
   return (
@@ -20,7 +21,29 @@ export default function Home() {
 
       <Glow />
       <div id="blur"></div>
-      {/* <Blob /> */}
+      <BouncingBlob
+        canWidth={1920}
+        canHeight={1080}
+        blobWidth={800}
+        blobHeight={800}
+        color="pink"
+      />
+
+      <BouncingBlob
+        canWidth={1920}
+        canHeight={1080}
+        blobWidth={600}
+        blobHeight={600}
+        color="blue"
+      />
+
+      <BouncingBlob
+        canWidth={1920}
+        canHeight={1080}
+        blobWidth={400}
+        blobHeight={400}
+        color="purple"
+      />
 
       <SiteNavbar />
       <ContactUsButton />
@@ -41,7 +64,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="about section"></div>
+        {/* <div className="about section"></div> */}
 
         <div className="works section">
           <Text h2>Naše projekty</Text>
